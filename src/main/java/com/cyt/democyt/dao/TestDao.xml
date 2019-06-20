@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyt.democyt.dao.TestDao">
+
+    <insert id="add" parameterType="com.cyt.democyt.bean.People">
+        insert into
+            user
+            (name, age, sex)
+        VALUES
+            (#{name}, #{age}, #{sex})
+    </insert>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from
+            user
+        where
+            id = #{id}
+    </delete>
+
+    <update id="update" parameterType="com.cyt.democyt.bean.People">
+        update
+            user
+        set
+            name = #{name},
+            age = #{age},
+            sex = #{sex}
+        where
+            id = #{id}
+    </update>
+
+    <select id="select" parameterType="java.lang.Integer" resultType="com.cyt.democyt.bean.People">
+        select
+            *
+        from
+            user
+        where
+            id = #{id}
+    </select>
+
+    <select id="selectAll" resultType="com.cyt.democyt.bean.People">
+        select
+            *
+        from
+            user
+    </select>
+
+</mapper>

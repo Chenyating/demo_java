@@ -1,0 +1,12 @@
+server:
+  port: 8012
+  servlet:
+    context-path: /demo
+spring:
+  application:
+    name: demo
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: robot
+    password: xjz@robottest#!
+    url: jdbc:mysql://106.75.177.192:8207/test?useUnicode=true&amp;characterEncoding=utf-8&autoReconnect=true&allowMultiQueries=true
